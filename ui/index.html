@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>ProcLens — Scheduling laboratory</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237fe3c0'/%3E%3Cpath d='M9 24V8h9a6 6 0 0 1 0 12h-5' fill='none' stroke='%23101516' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a href="#content" class="skip">Skip to content</a>
+  <aside class="sidebar">
+    <a class="brand" href="#overview"><span class="brand-mark">P<span>↗</span></span>ProcLens<span class="version">LAB</span></a>
+    <button class="search-command" id="command-open">⌕ <span>Jump to…</span><kbd>Ctrl K</kbd></button>
+    <div class="nav-label">WORKSPACE</div><nav id="navigation" aria-label="Main navigation"></nav>
+    <div class="sidebar-bottom"><div class="status"><span class="dot" id="connection-dot"></span><span id="connection">Connecting to engine</span></div><p>Local-first. Read-only. Yours.</p><button id="theme" class="quiet">◐ <span>Switch to light</span></button></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div>Workspace <span class="slash">/</span> <strong id="breadcrumb">Overview</strong></div><div class="toolbar"><span class="pill" id="mode">NO WORKLOAD</span><button id="refresh" class="quiet" aria-label="Refresh backend state">↻</button></div></header>
+    <main id="content" tabindex="-1"><div class="skeleton"></div><div class="skeleton"></div></main>
+    <footer><span><span class="dot"></span> SINGLE-CPU SIMULATION</span><span>Observed on your machine. Replayed in a model.</span></footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="palette"><form method="dialog"><div class="palette-heading"><label for="command-search">Jump to a screen</label><button aria-label="Close command palette">Esc</button></div></form><input id="command-search" type="search" placeholder="Type a screen name…" autocomplete="off"><div id="command-results"></div></dialog>
+</body>
+</html>
